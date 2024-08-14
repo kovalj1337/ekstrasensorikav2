@@ -1,3 +1,79 @@
-body{
+html{
+    margin: 0px;
+    background-color: #142b37;
+}
+p{
+    margin: 0px;
+}
+h1{
+    margin: 0px;
+}
+html p{
+    font-family: "Moderustic", sans-serif;
+}
+.flex-box{
+    display: flex;
+    justify-content: center;
+}
+.blur{
+    /* min-height: 900px;
+    height: 100%;
+    filter: blur(3px); */
+    /* width: 100%; */
+    /* z-index: -1; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px); /* Применение размытия */
+    z-index: -1; /* Элемент находится позади формы */
     background: url(../img/zagado4nijlis.jpg) center/cover no-repeat;
+    background-size: cover;
+}
+.game{
+    background-color: rgb(255 255 255 / 30%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    position: relative;
+    z-index: 1; /* Форма находится поверх размытого фона */
+    /* background-color: white; Белый фон формы */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень для отделения формы от фона */
+    max-height: 600px;
+    padding: 30px 0px;
+    flex-direction: column;
+    align-items: center;
+}
+.zagolovok{
+    font-family: "Moderustic", sans-serif;
+    text-align: center;
+    margin-bottom: 1px;
+}
+.vvod{
+    justify-content: center;
+    text-align: center;
+}
+.font{
+    font-size: 20px;
+}
+.vvod form{
+    margin-top: 20px;
+}
+.submit{
+    border: none;
+    border: 1px black solid;
+    border-radius: 12px;
+    background-color: #909090;
+    color: black;
+    padding: 5px 25px;
+}
+.vvod form select{
+    padding: 5px;
+    border-radius: 12px;
+    background-color: #909090;
+}
+.margin-top{
+    margin-top: 20px;
 }
