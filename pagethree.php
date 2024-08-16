@@ -62,9 +62,12 @@
         $checkNumb[] = $numbSelect;
     }
     if ($rand == $choice) {
-        echo ("<p class='font'>Вітаю!</p><p class='font'>Ви вгадали правильне число!</p>");
+        echo ("<p class='font'>Вітаю!</p><p class='font'>Ви вгадали правильне число! $rand</p>");
     } else {
         $start = floor($rand / 10) * 10 + 5;
+        if($rand % 10 == 0){
+            $start = floor($rand / 10) - 1 * 10 + 5;
+        }
         echo ($start);
         if ($rand <= $start) {
             $numb = floor($rand / 10) * 10 + 1;
@@ -75,6 +78,7 @@
                     echo("<p class='font'>Загадане число <b>меньше</b> твого</p>");
                 }
             }
+            echo($rand);
             cikl($numb);
         } else if ($rand > $start) {
             $numb = ceil($rand / 10) * 10 - 4;
@@ -84,6 +88,7 @@
                 }else{
                     echo("<p class='font'>Загадане число <b>меньше</b> твого</p>");
                 }
+                echo($rand);
             cikl($numb);
         }
         // var_dump($numb);
